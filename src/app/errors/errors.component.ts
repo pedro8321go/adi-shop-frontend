@@ -6,9 +6,9 @@ import {RouterOutlet} from "@angular/router";
   imports: [
     RouterOutlet
   ],
-  templateUrl: './products.component.html',
+  templateUrl: './errors.component.html',
   styles: ``
 })
-export default class ProductsComponent {
+export default class ErrorsComponent {
 
 }
