@@ -4,13 +4,15 @@ import {Product} from "../../../interfaces/product.interface";
 import {JsonPipe} from "@angular/common";
 import {RouterLink} from "@angular/router";
 import {ProductCardComponent} from "../../components/product-card/product-card.component";
+import {PaginationComponent} from "../../components/pagination/pagination.component";
 
 @Component({
   standalone: true,
   imports: [
     JsonPipe,
     RouterLink,
-    ProductCardComponent
+    ProductCardComponent,
+    PaginationComponent
   ],
   templateUrl: './products-list.component.html',
   styles: ``

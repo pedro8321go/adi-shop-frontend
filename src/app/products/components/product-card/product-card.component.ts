@@ -14,6 +14,6 @@ import { Input} from "@angular/core";
 })
 export class ProductCardComponent {
   @Input() product: Product | undefined;
-  @Input() index: Number | undefined;
+  @Input() index: number | undefined;
 
 }
