@@ -16,6 +16,11 @@ export interface Product {
   Color_detail:        ColorDetail[];
 }
 
+export interface ProductsResponse {
+  products: Product[];
+  total: number;
+}
+
 export interface Care {
   title:   string;
   content: string[];

@@ -1,14 +1,13 @@
 
-<section class="text-gray-600 body-font">
+<section *ngIf="data" class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap m-4">
-      @for (product of productsService.products(); track $index) {
+      @for (product of data.products; track $index) {
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <app-product-card [product]="product" [index]="$index"></app-product-card>
+          <app-product-card [product]="product" [index]="$index + offset"></app-product-card>
         </div>
       }
     </div>
-    <app-pagination></app-pagination>
+    <app-pagination [total]="data.total" [limit]="limit" (offset)="offsetChange($event)"></app-pagination>
   </div>
-
 </section>
