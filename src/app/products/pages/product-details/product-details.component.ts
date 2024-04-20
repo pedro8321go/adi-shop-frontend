@@ -5,12 +5,16 @@ import {toSignal} from "@angular/core/rxjs-interop";
 import {ProductsService} from "../../../services/products.service";
 import {switchMap} from "rxjs";
 import {JsonPipe, NgIf} from "@angular/common";
+import {RatingStarComponent} from "../../components/rating-star/rating-star.component";
+import {AccordionProductComponent} from "../../components/accordion-product/accordion-product.component";
 
 @Component({
   standalone: true,
   imports: [
     NgIf,
-    JsonPipe
+    JsonPipe,
+    RatingStarComponent,
+    AccordionProductComponent
   ],
   templateUrl: './product-details.component.html',
   styles: ``
