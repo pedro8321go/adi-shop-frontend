@@ -28,6 +28,32 @@ export class ProductsService {
       )
   }
 
+  getProductById(id: number): Observable<Product> {
+    return this.http.get<Product[]>(this.dataUrl)
+      .pipe(
+        map( resp => {
+          if (id <= resp.length-1) {
+            return resp[id]
+          } else {
+            return resp[0]
+          }
+        })
+      )
+  }
+
+  // getProductById(id: number) {
+  //   return this.http.get<Product[]>('assets/demo/data/DatosScraping.json')
+  //       .pipe(
+  //         map ( resp => {
+  //           if (id <= resp.length-1) {
+  //             return resp[id]
+  //           } else {
+  //             return resp[0]
+  //           }
+  //         })
+  //       )
+  // }
+
   // #state = signal<State>({
   //   loading: true,
   //   products: []
